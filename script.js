@@ -44,3 +44,37 @@ CART_CONFIRM.onclick = () => {
     const LI = `<li>${NAME.textContent}</li>`;
     CART_LIST.insertAdjacentHTML("beforeend", LI);
 }
+
+//出力
+const OPTION_ANSWER = document.getElementById("optionAnswer");
+
+//ラジオボタン　-name属性あり
+function riceButtonClick(){
+    const RICE_INPUT = document.riceForm.rice;
+    let rice_output;
+    for (let i = 0; i < RICE_INPUT.length; i++) {
+        if(RICE_INPUT[i].checked) {
+            rice_output = RICE_INPUT[i].value;
+        }
+    }
+
+    OPTION_ANSWER.textContent = `ご飯の量: ${rice_output}`;
+};
+
+function accessoryButtonClick(){
+    const ACCESSORY_INPUT = document.accessoryForm.accessory;
+    let accessory_output = '';
+    for (let i = 0; i < ACCESSORY_INPUT.length; i++) {
+        if(ACCESSORY_INPUT[i].checked) {
+            accessory_output = accessory_output + ' ' + ACCESSORY_INPUT[i].value;
+        }
+    }
+
+    OPTION_ANSWER.textContent = `付属品: ${accessory_output}`;
+};
+
+function mediaButtonClick(){
+    const MEDIA_INPUT = document.mediaForm.media;
+    const NUM = MEDIA_INPUT.selectedIndex;
+    OPTION_ANSWER.textContent = `当店を知ったきっかけ: ${MEDIA_INPUT.options[NUM].value}`;
+}

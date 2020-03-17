@@ -78,3 +78,13 @@ function mediaButtonClick(){
     const NUM = MEDIA_INPUT.selectedIndex;
     OPTION_ANSWER.textContent = `当店を知ったきっかけ: ${MEDIA_INPUT.options[NUM].value}`;
 }
+
+function addressButtonClick(){
+    const ADDRESS = document.addressForm.address.value;
+    OPTION_ANSWER.textContent = `お届け先住所: ${ADDRESS}`;
+}
+
+function requestButtonClick(){
+    const REQUEST = document.requestForm.request.value;
+    OPTION_ANSWER.textContent = `その他ご要望: ${REQUEST}`;
+}

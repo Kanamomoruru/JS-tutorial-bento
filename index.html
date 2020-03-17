@@ -80,6 +80,22 @@
         </div>
 
         <div class="mt-4">
+            <h5>お届け先住所</h5>
+            <form name="addressForm">
+               <input name="address" type="text" class="border">
+               <input type="button" class="btn btn-sm btn-outline-info ml-2" value="送信" onclick="addressButtonClick()">
+            </form>
+        </div>
+
+        <div class="mt-4">
+            <h5>その他ご要望</h5>
+            <form name="requestForm">
+               <textarea id="request" rows="3" class="border"></textarea>
+               <input type="button" class="btn btn-sm btn-outline-info ml-2" value="送信" onclick="requestButtonClick()">
+            </form>
+        </div>
+
+        <div class="mt-4">
             <div id="optionAnswer" class="border mx-auto mb-5" style="height: 300px; width: 300px;"></div>
         </div>
 
